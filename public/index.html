@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR & Barcode Scanner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Modern Bottom Navbar -->
+<nav class="bottom-nav">
+  <div class="nav-item active">
+    <i class="icon">&#8962;</i>
+    <span>Home</span>
+  </div>
+  
+  <div class="nav-item">
+    <i class="icon">&#128247;</i>
+    <span>Scan</span>
+  </div>
+
+  <div class="nav-item">
+    <i class="icon">&#128221;</i>
+    <span>History</span>
+  </div>
+
+  <div class="nav-item">
+    <i class="icon">&#9881;</i>
+    <span>Settings</span>
+  </div>
+</nav>
+
+
+  <select id="language">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+  </select>
+
+  <!-- Camera + Laser Container -->
+  <div id="camera-container">
+  <video id="camera" autoplay></video>
+
+  <!-- Scanner Frame Corners -->
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <!-- Laser -->
+  <div id="laser"></div>
+</div>
+
+
+  <button id="scanBtn">Start Scanning</button>
+
+  <div id="result"></div>
+
+  <!-- ZXing multi-code reader -->
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
+
+  <!-- Your app -->
+  <script src="app.js"></script>
+
+</body>
+</html>
