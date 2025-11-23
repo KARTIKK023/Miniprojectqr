@@ -155,7 +155,7 @@ if (/^\d+$/.test(text)) {
 
     speak("Barcode detected", lang);
 
-    const url = `http://localhost:5003/api/barcode?code=${barcode}`;
+    const url = `/api/barcode?code=${barcode}`;
 
     try {
         const res = await fetch(url);
